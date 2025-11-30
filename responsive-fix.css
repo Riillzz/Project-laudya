@@ -1,0 +1,43 @@
+/* FIX RESPONSIVE COVERFLOW – NON DESTRUCTIVE */
+
+@media (max-width: 768px) {
+    .coverflow-item {
+        width: 55vw !important;
+        height: 55vw !important;
+    }
+
+    .coverflow {
+        height: 260px !important;
+    }
+
+    .nav-button {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 22px !important;
+    }
+
+    .info {
+        top: 95px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .coverflow-item {
+        width: 70vw !important;
+        height: 70vw !important;
+    }
+
+    .coverflow {
+        height: 220px !important;
+    }
+
+    .nav-button {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 18px !important;
+    }
+
+    .info h2 {
+        font-size: 24px !important;
+    }
+}
