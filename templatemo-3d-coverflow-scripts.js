@@ -86,36 +86,36 @@ https://templatemo.com/tm-595-3d-coverflow
             items.forEach((item, index) => {
                 let offset = index - currentIndex;
                 
-                if (offset > items.length / 1.5) {
+                if (offset > items.length / 2) {
                     offset = offset - items.length;
                 }
-                else if (offset < -items.length / 1.5) {
+                else if (offset < -items.length / 2) {
                     offset = offset + items.length;
                 }
                 
                 const absOffset = Math.abs(offset);
                 const sign = Math.sign(offset);
                 
-                let translateX = offset * 50;
-                let translateZ = -absOffset * 70;
-                let rotateY = -sign * Math.min(absOffset * 10, 10);
-                let opacity = 1 - (absOffset * 0.1);
+                let translateX = offset * 220;
+                let translateZ = -absOffset * 200;
+                let rotateY = -sign * Math.min(absOffset * 60, 60);
+                let opacity = 1 - (absOffset * 0.2);
                 let scale = 1 - (absOffset * 0.1);
 
                 if (absOffset > 3) {
-                    opacity = 1;
+                    opacity = 0;
 
-                    translateX = sign * 10;
+                    translateX = sign * 800;
                 }
 
                 item.style.transform = `
-                    translateX(${translssateX}px) 
+                    translateX(${translateX}px) 
                     translateZ(${translateZ}px) 
                     rotateY(${rotateY}deg)
                     scale(${scale})
                 `;
                 item.style.opacity = opacity;
-                item.style.zIndex = 10 - absOffset;
+                item.style.zIndex = 100 - absOffset;
 
                 item.classList.toggle('active', index === currentIndex);
             });
@@ -244,7 +244,7 @@ https://templatemo.com/tm-595-3d-coverflow
             autoplayInterval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % items.length;
                 updateCoverflow();
-            }, 2000);
+            }, 4000);
             isPlaying = true;
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';
