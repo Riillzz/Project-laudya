@@ -547,7 +547,7 @@ https://templatemo.com/tm-595-3d-coverflow
         }
 
         .about-info h3 {
-            font-size: 36px;
+            font-size: 25px;
             margin-bottom: 30px;
             line-height: 1.3;
         }
@@ -571,6 +571,7 @@ https://templatemo.com/tm-595-3d-coverflow
             margin-bottom: 20px;
             font-size: 16px;
             color: #3f98b5;
+			padding-left: 15px;
         }
 
         .feature-list li::before {
